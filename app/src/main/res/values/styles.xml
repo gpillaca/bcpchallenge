@@ -5,4 +5,19 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorBackground</item>
     </style>
+
+    <style name="AppTheme.BCP" parent="AppTheme" />
+
+    <style name="AppTheme.BCP.Button">
+        <item name="android:background">#00aae4</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:height">150dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
 </resources>

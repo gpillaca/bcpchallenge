@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVerticalStartCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontalCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/dark_blue"
+        app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLabelYouSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/you_send"
+        app:layout_constraintLeft_toLeftOf="@+id/guideLineVerticalStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSendValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:inputType="number"
+        android:text="10"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStart"
+        app:layout_constraintRight_toRightOf="@+id/guideLineVerticalStartCurrency"
+        app:layout_constraintTop_toBottomOf="@id/textViewLabelYouSend" />
+
+    <TextView
+        android:id="@+id/textViewLabelYouGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/you_get"
+        app:layout_constraintLeft_toLeftOf="@+id/guideLineVerticalStart"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontalCenter" />
+
+    <EditText
+        android:id="@+id/editTextGetValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:inputType="number"
+        android:text="20"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStart"
+        app:layout_constraintRight_toRightOf="@+id/guideLineVerticalStartCurrency"
+        app:layout_constraintTop_toBottomOf="@id/textViewLabelYouGet" />
+
+    <TextView
+        android:id="@+id/textViewNameSendCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Dolares"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+        app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNameGetCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Soles"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontalCenter" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gris"
+        app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+        app:layout_constraintTop_toTopOf="@+id/guideLineHorizontalCenter" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_button_round_white"
+        android:contentDescription="@null"
+        android:elevation="2dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_change"
+        app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+        app:layout_constraintRight_toRightOf="@+id/guideLineVerticalEnd"
+        app:layout_constraintTop_toTopOf="@+id/guideLineHorizontalCenter" />
+</androidx.constraintlayout.widget.ConstraintLayout>
