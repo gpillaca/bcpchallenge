@@ -1,10 +1,12 @@
 package com.gpillaca.bcpchallenge.ui.launcher
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.gpillaca.bcpchallenge.databinding.ActivityLauncherBinding
+import com.gpillaca.bcpchallenge.ui.main.MainActivity
 import com.gpillaca.bcpchallenge.util.onAnimatorEnd
 
 private const val DURATION_ANIMATION = 1200L
@@ -25,7 +27,9 @@ class LauncherActivity : AppCompatActivity() {
         animator.duration =
             DURATION_ANIMATION
         animator.onAnimatorEnd {
-            //TODO navigate to activity
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         animator.start()
     }

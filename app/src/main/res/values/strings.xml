@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BCP Challenge</string>
+    <string name="start_your_operation">Empieza tu operación</string>
+    <string name="you_send">Tú envías:</string>
+    <string name="you_get">Tú recibes:</string>
+    <string name="purchase">Compra:</string>
+    <string name="sale">Venta:</string>
+    <string name="conversion_value">Compra: %s | Venta: %s</string>
+    <string name="error_message">Ocurrió un error desconocido, inténtalo nuevamente.</string>
 </resources>
