@@ -1,0 +1,124 @@
+{
+  "countries": [
+    {
+      "name": "Perú",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bandera_peruana_DOS.jpg",
+      "currency": {
+        "code": "PEN",
+        "description": "Soles"
+      },
+      "countries_converter": [
+        {
+          "name": "Estados Unidos",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+          "currency": {
+            "code": "USD",
+            "description": "Dólares"
+          },
+          "purchase_value": 3.56,
+          "sale_value": 3.563
+        },
+        {
+          "name": "España",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png",
+          "currency": {
+            "code": "EUR",
+            "description": "Euros"
+          },
+          "purchase_value": 4.147,
+          "sale_value": 4.304
+        },
+        {
+          "name": "Japón",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+          "currency": {
+            "code": "JPY",
+            "description": "Yens"
+          },
+          "purchase_value": 0.033,
+          "sale_value": 0.037
+        }
+      ]
+    },
+    {
+      "name": "Estados Unidos",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+      "currency": {
+        "code": "USD",
+        "description": "Dólares"
+      },
+      "countries_converter": [
+        {
+          "name": "Perú",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bandera_peruana_DOS.jpg",
+          "currency": {
+            "code": "PEN",
+            "description": "Soles"
+          },
+          "purchase_value": 0.28,
+          "sale_value": 0.29
+        },
+        {
+          "name": "España",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png",
+          "currency": {
+            "code": "EUR",
+            "description": "Euros"
+          },
+          "purchase_value": 1.17,
+          "sale_value": 1.18
+        },
+        {
+          "name": "Japón",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+          "currency": {
+            "code": "JPY",
+            "description": "Yens"
+          },
+          "purchase_value": 0.0094,
+          "sale_value": 0.0099
+        }
+      ]
+    },
+    {
+      "name": "España",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png",
+      "currency": {
+        "code": "EUR",
+        "description": "Euros"
+      },
+      "countries_converter": [
+        {
+          "name": "Estados Unidos",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+          "currency": {
+            "code": "USD",
+            "description": "Dólares"
+          },
+          "purchase_value": 0.85,
+          "sale_value": 0.86
+        },
+        {
+          "name": "Perú",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bandera_peruana_DOS.jpg",
+          "currency": {
+            "code": "PEN",
+            "description": "Soles"
+          },
+          "purchase_value": 0.24,
+          "sale_value": 0.25
+        },
+        {
+          "name": "Japón",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+          "currency": {
+            "code": "JPY",
+            "description": "Yens"
+          },
+          "purchase_value": 0.0080,
+          "sale_value": 0.0088
+        }
+      ]
+    }
+  ]
+}
