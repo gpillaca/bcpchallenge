@@ -20,5 +20,5 @@ fun Application.initDI() {
 val appModule = module {
     single { ApiClient.countriesDbServices }
     factory<RemoteDataSource>(named("retrofit")) { RetrofitDataSource(countriesDbServices = get()) }
-    factory<RemoteDataSource>(named("fakeRetrofit")) { FakeRetrofitDataSource(countriesDbServices = get()) }
+    factory<RemoteDataSource>(named("fakeRetrofit")) { FakeRetrofitDataSource(context = get()) }
 }
