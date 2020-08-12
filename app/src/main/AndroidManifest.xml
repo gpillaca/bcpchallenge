@@ -20,6 +20,11 @@
 
         <activity
             android:name=".ui.main.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.countries.CountriesActivity"
             android:exported="false" />
     </application>
 
