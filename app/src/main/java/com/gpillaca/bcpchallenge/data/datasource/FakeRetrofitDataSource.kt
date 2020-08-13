@@ -3,7 +3,7 @@ package com.gpillaca.bcpchallenge.data.datasource
 import android.content.Context
 import com.gpillaca.bcpchallenge.R
 import com.gpillaca.bcpchallenge.domain.Countries
-import com.gpillaca.bcpchallenge.ui.common.OperationResult
+import com.gpillaca.bcpchallenge.ui.common.OperationResults
 import com.gpillaca.bcpchallenge.util.toEntity
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -12,12 +12,12 @@ import java.nio.charset.StandardCharsets
 class FakeRetrofitDataSource(
     private val context: Context
 ) : RemoteDataSource {
-    override suspend fun listCountries(): OperationResult<Countries> {
+    override suspend fun listCountries(): OperationResults<Countries> {
         return try {
             val countries = stringListCountries().toEntity<Countries>()
-            OperationResult.Success(countries)
+            OperationResults.Success(emptyList())
         } catch (e: Exception) {
-            OperationResult.Error(e)
+            OperationResults.Error(e)
         }
     }
 

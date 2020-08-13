@@ -8,7 +8,7 @@ import org.koin.dsl.module
 val dataModule = module {
     factory<CountriesRepository> {
         CountriesRepositoryImpl(
-            remoteDataSource = get(named("fakeRetrofit"))
+            remoteDataSource = get()
         )
     }
 }

@@ -17,7 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.gpillaca.bcpchallenge.ui.common.CardViewChangeCurrency
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardViewChangeCurrency"
         android:layout_width="0dp"
         android:layout_height="150dp"
@@ -26,7 +26,155 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineVerticalStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineVerticalEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineVerticalStartCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineHorizontalCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <View
+                android:id="@+id/buttonYouSend"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/buttonYouGet"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/dark_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideLineHorizontalCenter" />
+
+            <TextView
+                android:id="@+id/textViewLabelYouSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/you_send"
+                android:textColor="@color/text_color_secondary"
+                app:layout_constraintLeft_toLeftOf="@+id/guideLineVerticalStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextSendValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="@null"
+                android:background="@android:color/transparent"
+                android:hint="@string/default_money_value"
+                android:inputType="number"
+                android:textColor="@color/text_color_primary"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStart"
+                app:layout_constraintRight_toRightOf="@+id/guideLineVerticalStartCurrency"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelYouSend" />
+
+            <TextView
+                android:id="@+id/textViewLabelYouGet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/you_get"
+                android:textColor="@color/text_color_secondary"
+                app:layout_constraintLeft_toLeftOf="@+id/guideLineVerticalStart"
+                app:layout_constraintTop_toTopOf="@id/guideLineHorizontalCenter" />
+
+            <EditText
+                android:id="@+id/editTextGetValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="@null"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="@string/default_money_value"
+                android:inputType="number"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStart"
+                app:layout_constraintRight_toRightOf="@+id/guideLineVerticalStartCurrency"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelYouGet" />
+
+            <TextView
+                android:id="@+id/textViewNameSendCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNameGetCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineVerticalStartCurrency"
+                app:layout_constraintTop_toTopOf="@id/guideLineHorizontalCenter" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+                app:layout_constraintTop_toTopOf="@+id/guideLineHorizontalCenter" />
+
+            <ImageButton
+                android:id="@+id/buttonChange"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/background_button_round_white"
+                android:contentDescription="@null"
+                android:elevation="2dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_change"
+                app:layout_constraintBottom_toBottomOf="@+id/guideLineHorizontalCenter"
+                app:layout_constraintRight_toRightOf="@+id/guideLineVerticalEnd"
+                app:layout_constraintTop_toTopOf="@+id/guideLineHorizontalCenter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textViewConversionValue"
@@ -42,10 +190,20 @@
         app:layout_constraintTop_toBottomOf="@+id/cardViewChangeCurrency" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonInitOperation"
         style="@style/AppTheme.BCP.Button"
         android:foreground="?attr/selectableItemBackground"
         android:text="@string/start_your_operation"
         tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

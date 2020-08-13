@@ -37,6 +37,16 @@
           },
           "purchase_value": 0.033,
           "sale_value": 0.037
+        },
+        {
+          "name": "Perú",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bandera_peruana_DOS.jpg",
+          "currency": {
+            "code": "PEN",
+            "description": "Soles"
+          },
+          "purchase_value": 1,
+          "sale_value": 1
         }
       ]
     },
@@ -77,6 +87,16 @@
           },
           "purchase_value": 0.0094,
           "sale_value": 0.0099
+        },
+        {
+          "name": "Estados Unidos",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+          "currency": {
+            "code": "USD",
+            "description": "Dólares"
+          },
+          "purchase_value": 1,
+          "sale_value": 1
         }
       ]
     },
@@ -115,8 +135,18 @@
             "code": "JPY",
             "description": "Yens"
           },
-          "purchase_value": 0.0080,
+          "purchase_value": 0.008,
           "sale_value": 0.0088
+        },
+        {
+          "name": "España",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png",
+          "currency": {
+            "code": "EUR",
+            "description": "Euros"
+          },
+          "purchase_value": 1,
+          "sale_value": 1
         }
       ]
     }

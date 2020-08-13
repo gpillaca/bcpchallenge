@@ -12,9 +12,13 @@ fun CountriesDbResult.toDomainCountries(): Countries {
 
     this.countriesConverter.forEach { country ->
         countriesConverter.add(
-            with(country) {
-                Country(name, flag, currency, purchaseValue, saleValue)
-            }
+            Country(
+                country.name,
+                country.flag,
+                Currency(country.currency.code, country.currency.description),
+                country.purchaseValue,
+                country.saleValue
+            )
         )
     }
 

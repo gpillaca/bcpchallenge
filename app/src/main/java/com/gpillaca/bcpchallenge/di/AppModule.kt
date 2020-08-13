@@ -13,12 +13,12 @@ import org.koin.dsl.module
 fun Application.initDI() {
     startKoin {
         androidContext(this@initDI)
-        modules(listOf(appModule, dataModule, scopesModule))
+        modules(listOf(appModule, dataModule, scopesModule, presenterModule))
     }
 }
 
 val appModule = module {
     single { ApiClient.countriesDbServices }
-    factory<RemoteDataSource>(named("retrofit")) { RetrofitDataSource(countriesDbServices = get()) }
-    factory<RemoteDataSource>(named("fakeRetrofit")) { FakeRetrofitDataSource(context = get()) }
+    factory<RemoteDataSource>() { RetrofitDataSource(countriesDbServices = get()) }
+    //factory<RemoteDataSource>(named("fakeRetrofit")) { FakeRetrofitDataSource(context = get()) }
 }
