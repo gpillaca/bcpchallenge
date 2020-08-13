@@ -3,6 +3,7 @@ package com.gpillaca.bcpchallenge.ui.countries
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -60,5 +61,18 @@ class CountriesActivity : AppCompatActivity(), CountriesContract.View {
     override fun showCountries(countries: List<Country>) {
         countriesAdapter.countries = countries
         countriesAdapter.currencyCode = ""
+    }
+
+    override fun showProgress() {
+        binding.progressBar.visibility = View.VISIBLE
+    }
+
+    override fun hideProgress() {
+        binding.progressBar.visibility = View.GONE
+    }
+
+    override fun onDestroy() {
+        presenter?.onDestroyScope()
+        super.onDestroy()
     }
 }

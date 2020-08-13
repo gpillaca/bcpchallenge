@@ -18,21 +18,29 @@ class CountriesPresenter(
 
     override fun loadCountriesOfOrigin(currencyCode: String) {
         launch {
+            view.showProgress()
             when (val result = getCountriesOfOrigin.invoke(currencyCode)) {
                 is OperationResults.Success -> {
                     view.showCountriesWithOrigin(result.data, currencyCode)
                 }
             }
+            view.hideProgress()
         }
     }
 
     override fun loadCountriesOrigin() {
         launch {
+            view.showProgress()
             when (val result = getCountriesOrigin.invoke()) {
                 is OperationResults.Success -> {
                     view.showCountries(result.data)
                 }
             }
+            view.hideProgress()
         }
+    }
+
+    override fun onDestroyScope() {
+        destroyScope()
     }
 }

@@ -50,9 +50,9 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation androidLibs.values()
-    implementation androidKaptLibs.values()
+    kapt androidKaptLibs.values()
     implementation kotlinLibs.values()
     implementation libs.values()
-    implementation testLibs.values()
-    implementation androidTestLibs.values()
+    testImplementation testLibs.values()
+    androidTestImplementation androidTestLibs.values()
 }
