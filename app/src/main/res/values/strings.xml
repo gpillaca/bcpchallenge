@@ -7,10 +7,5 @@
     <string name="sale">Venta:</string>
     <string name="conversion_value">Compra: %s | Venta: %s</string>
     <string name="error_message">Ocurrió un error desconocido, inténtalo nuevamente.</string>
-    <string name="title_activity_countries">CountriesActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
+    <string name="default_money_value">0</string>
 </resources>

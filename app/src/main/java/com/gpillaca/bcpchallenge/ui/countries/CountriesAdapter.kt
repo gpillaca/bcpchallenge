@@ -14,6 +14,7 @@ import kotlin.properties.Delegates
 class CountriesAdapter(private val listener: (Country) -> Unit) :
     RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
 
+    var currencyCode: String = ""
     var countries: List<Country> by Delegates.observable(emptyList()) { _, old, new ->
         DiffUtil.calculateDiff(object : DiffUtil.Callback() {
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
@@ -39,17 +40,25 @@ class CountriesAdapter(private val listener: (Country) -> Unit) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val country = countries[position]
-        holder.bind(country)
+        holder.bind(country, currencyCode)
         holder.itemView.setOnClickListener {
             listener(country)
         }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(country: Country) {
+        fun bind(country: Country, currencyCode: String) {
             itemView.imageViewFlag.load(country.flag)
             itemView.textViewName.text = country.name
-            itemView.textViewDescription.text = country.currency.description
+            itemView.textViewDescription.text = getCurrencyDescription(country, currencyCode)
+        }
+
+        private fun getCurrencyDescription(country: Country, currencyCode: String): String {
+            return if (currencyCode.isNotEmpty()) {
+                "1 $currencyCode = ${country.saleValue} ${country.currency.code}"
+            } else {
+                country.currency.code
+            }
         }
     }
 }
