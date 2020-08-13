@@ -49,10 +49,15 @@ allprojects {
         ]
 
         testLibs = [
-                junit: 'junit:junit:4.13'
+                junit        : 'junit:junit:4.13',
+                junitExt     : 'androidx.test.ext:junit:1.1.1',
+                mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0",
+                mockitoInline: "org.mockito:mockito-inline:2.28.2",
+                koinTest     : 'org.koin:koin-test:2.1.1',
         ]
 
         androidTestLibs = [
+                testRunner   : 'androidx.test:runner:1.2.0',
                 espresso: 'androidx.test.espresso:espresso-contrib:3.2.0',
                 extJunit: 'androidx.test.ext:junit-ktx:1.1.1',
         ]
