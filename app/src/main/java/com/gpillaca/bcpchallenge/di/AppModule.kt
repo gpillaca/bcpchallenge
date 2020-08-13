@@ -1,9 +1,8 @@
 package com.gpillaca.bcpchallenge.di
 
 import android.app.Application
-import com.gpillaca.bcpchallenge.data.datasource.FakeRetrofitDataSource
-import com.gpillaca.bcpchallenge.data.datasource.RemoteDataSource
-import com.gpillaca.bcpchallenge.data.datasource.RetrofitDataSource
+import com.gpillaca.bcpchallenge.data.database.AppDatabase
+import com.gpillaca.bcpchallenge.data.datasource.*
 import com.gpillaca.bcpchallenge.data.server.ApiClient
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -18,7 +17,9 @@ fun Application.initDI() {
 }
 
 val appModule = module {
+    single { AppDatabase.getInstance(get()) }
     single { ApiClient.countriesDbServices }
+    factory<LocalDataSource> { RoomDataSource(get()) }
     factory<RemoteDataSource>() { RetrofitDataSource(countriesDbServices = get()) }
     //factory<RemoteDataSource>(named("fakeRetrofit")) { FakeRetrofitDataSource(context = get()) }
 }
