@@ -2,6 +2,7 @@ package com.gpillaca.bcpchallenge
 
 import com.gpillaca.bcpchallenge.domain.Country
 import com.gpillaca.bcpchallenge.domain.Currency
+import com.gpillaca.bcpchallenge.domain.OperationDetail
 
 val mockedCurrency = Currency(
     "PEN",
@@ -14,4 +15,13 @@ val mockedCountry = Country(
     mockedCurrency,
     0.0,
     0.0
+)
+
+val mockedOperationDetail = OperationDetail(
+    "PEN",
+    "Soles",
+    "USD",
+    "Dólares",
+    3.56,
+    3.563
 )
